@@ -6,13 +6,9 @@ def solution(numbers, target):
                 return 1
             else:
                 return 0
-        
         ret = 0
         ret += DFS(index+1, sum_numbers + numbers[index])
         ret += DFS(index+1, sum_numbers - numbers[index])
-        
         return ret
-    
     answer = DFS(0, 0)
-    
     return answer
