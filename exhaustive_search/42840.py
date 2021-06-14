@@ -18,5 +18,4 @@ def solution(answers):
     for i in range(0, len(count), 1):
         if max == count[i]:
             answer.append(i+1)
-    # print(count[0], count[1], count[2])
     return answer
