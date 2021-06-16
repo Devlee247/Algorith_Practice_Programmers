@@ -5,7 +5,6 @@ def solution(scoville, K):
     heap = []
     for i in scoville:
         heapq.heappush(heap, i)
-        
     while heap[0] < K:
         a = heapq.heappop(heap)
         b = heapq.heappop(heap)
