@@ -1,13 +1,11 @@
 from itertools import permutations
 import math
-
 def solution(numbers):
     answer = 0
     number = []
     s = set()
     for i in numbers:
         number.append(int(i))
-        
     for i in range(1, len(number)+1):
         print(i)
         temp = list(permutations(number, i))
