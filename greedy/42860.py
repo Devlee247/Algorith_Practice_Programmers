@@ -13,12 +13,10 @@ def solution(name):
   init_string = ['A'] * len(name)
 
   incorrect_char_idx = list()
-
   # 각 문자마다 변경하는데 드는 최솟값
   # 위 아래 커서이동은 좌우 움직임과 무관함
   for input_char_and_idx, correct_char in zip(enumerate(name), init_string):
     input_char, idx = list(input_char_and_idx)[1], list(input_char_and_idx)[0]
-
     if input_char != correct_char:
       answer += get_moves(input_char)
       incorrect_char_idx.append(idx)
@@ -27,9 +25,7 @@ def solution(name):
     # 초기 커서는 맨 왼쪽
     current_pos = 0
     while len(incorrect_char_idx) != 0:
-
       distance_list = list()
-
       # 수정해야할 알파벳의 위치
       for idx in incorrect_char_idx:
         # 왼쪽 1번 --- 고쳐야할 위치 ----- 현재 위치 라면 ---- 끝위치
