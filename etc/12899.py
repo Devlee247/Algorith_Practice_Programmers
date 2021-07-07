@@ -1,19 +1,10 @@
 def solution(n):
-    arr = '124'
-    if n <= 3:
-        return arr[n - 1]
-    n -= 1
-    
-    result = []
-    
-    def dfs(n):
-        if n < 3:
-            result.append(arr[n])
-            return
-        
-        result.append(arr[n % 3])
-        dfs(n // 3 - 1)
-        
-    dfs(n)
-    
-    return ''.join(reversed(result))
+    answer = ''
+    while n > 0:
+        if n % 3 == 0:
+            answer += str(4)
+            n = n // 3 - 1
+        else:
+            answer += str(n % 3)
+            n = n // 3
+    return answer[::-1]  
